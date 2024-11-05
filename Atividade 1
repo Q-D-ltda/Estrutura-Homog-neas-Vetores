@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+    int vetor[5];
+    
+    // Alimenta o vetor com 5 números inteiros
+    printf("Digite 5 números inteiros:\n");
+    for(i = 0; i < 5; i++) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+    
+    // Apresenta o vetor em ordem inversa
+    printf("Vetor em ordem inversa:\n");
+    for(i = 4; i >= 0; i--) {
+        printf("%d ", vetor[i]);
+    }
+    
+    return 0;
+    }
