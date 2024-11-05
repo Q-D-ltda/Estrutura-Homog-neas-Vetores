@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[5];
+    int i;
+
+    // Alimenta o vetor com 5 números inteiros
+    printf("Digite 5 números inteiros:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Apresenta os valores ímpares
+    printf("Valores ímpares no vetor:\n");
+    for (i = 0; i < 5; i++) {
+        if (vetor[i] % 2 != 0) {
+            printf("%d ", vetor[i]);
+        }
+    }
+
+    return 0;
+}
