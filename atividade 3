@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[5];
+    int i;
+
+    // Alimenta o vetor com 5 números inteiros
+    printf("Digite 5 números inteiros:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Apresenta os índices onde estão armazenados os valores negativos
+    printf("Índices dos valores negativos:\n");
+    for (i = 0; i < 5; i++) {
+        if (vetor[i] < 0) {
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
