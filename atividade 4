@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+    int vetor[5];
+    int soma = 0;
+    float media;
+
+    // Alimenta o vetor com 5 números
+    printf("Digite 5 números:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &vetor[i]);
+        soma += vetor[i];
+    }
+
+    // Calcula a média
+    media = soma / 5.0;
+
+    // Apresenta os valores iguais ou superiores à média
+    printf("Valores iguais ou superiores à média (%.2f):\n", media);
+    for (i = 0; i < 5; i++) {
+        if (vetor[i] >= media) {
+            printf("%d\n", vetor[i]);
+        }
+    }
+
+    return 0;
+}
