@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+	int j;
+    int G[6]; // Gabarito da Mega-Sena
+    int A[10]; // Aposta
+    int pontos = 0;
+
+    // Alimentando o vetor G com o gabarito da Mega-Sena
+    printf("Digite os 6 numeros do gabarito da Mega-Sena:\n");
+    for (i = 0; i < 6; i++) {
+        scanf("%d", &G[i]);
+    }
+
+    // Alimentando o vetor A com a aposta
+    printf("Digite os 10 numeros da aposta:\n");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &A[i]);
+    }
+
+    // Verificando quantos pontos fez o apostador
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j < 10; j++) {
+            if (G[i] == A[j]) {
+                pontos++;
+                break;
+            }
+        }
+    }
+
+    // Mostrando o resultado
+    printf("O apostador fez %d pontos.\n", pontos);
+
+    return 0;
+}
