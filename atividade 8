@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[5];
+    int numero, i, encontrado = 0;
+
+    // Alimenta o vetor com 5 números inteiros distintos
+    printf("Digite 5 números inteiros distintos:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    // Lê um número qualquer do teclado
+    printf("Digite um número para buscar no vetor: ");
+    scanf("%d", &numero);
+
+    // Procura o número no vetor
+    for (i = 0; i < 5; i++) {
+        if (vetor[i] == numero) {
+            printf("Número encontrado no índice %d\n", i);
+            encontrado = 1;
+            break;
+        }
+    }
+
+    // Se o número não for encontrado
+    if (!encontrado) {
+        printf("Não encontrada\n");
+    }
+
+    return 0;
+}
