@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+    int vetor[100];
+
+    // Preenchendo o vetor com os valores 10, 20, 30, ..., 1000
+    for (i = 0; i < 100; i++) {
+        vetor[i] = (i + 1) * 10;
+    }
+
+    // Apresentando o vetor na tela
+    for (i = 0; i < 100; i++) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
