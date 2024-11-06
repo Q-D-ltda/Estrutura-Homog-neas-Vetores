@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+#define NUM_MERCADORIAS 10
+
+int main() {
+	int i;
+    int Q[NUM_MERCADORIAS]; // Quantidade vendida de cada produto
+    float P[NUM_MERCADORIAS]; // Preço de venda de cada produto
+    float faturamento = 0.0;
+
+    // Leitura das quantidades vendidas
+    printf("Digite a quantidade vendida de cada produto:\n");
+    for (i = 0; i < NUM_MERCADORIAS; i++) {
+        printf("Produto %d: ", i);
+        scanf("%d", &Q[i]);
+    }
+
+    // Leitura dos preços de venda
+    printf("Digite o preço de venda de cada produto:\n");
+    for (i = 0; i < NUM_MERCADORIAS; i++) {
+        printf("Produto %d: ", i);
+        scanf("%f", &P[i]);
+    }
+
+    // Cálculo do faturamento mensal
+    for (i = 0; i < NUM_MERCADORIAS; i++) {
+        faturamento += Q[i] * P[i];
+    }
+
+    // Apresentação do faturamento mensal
+    printf("Faturamento mensal do armazém: R$ %.2f\n", faturamento);
+
+    return 0;
+}
