@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+    int vetor[5];
+    
+    // Preenchendo o vetor com 5 elementos inteiros
+    for (i = 0; i < 5; i++) {
+        printf("Digite o elemento %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+    
+    // Trocando valores negativos por 0
+    for (i = 0; i < 5; i++) {
+        if (vetor[i] < 0) {
+            vetor[i] = 0;
+        }
+    }
+    
+    // Apresentando o vetor atualizado
+    printf("Vetor atualizado: ");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", vetor[i]);
+    }
+    
+    return 0;
+}
