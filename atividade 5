@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+    int A[5], B[5];
+
+    // Alimenta o vetor A com 5 números inteiros
+    printf("Digite 5 números inteiros:\n");
+    for ( i = 0; i < 5; i++) {
+        scanf("%d", &A[i]);
+    }
+
+    // Armazena o dobro de cada número do vetor A no vetor B
+    for ( i = 0; i < 5; i++) {
+        B[i] = 2 * A[i];
+    }
+
+    // Apresenta o vetor B na tela
+    printf("Vetor B (dobro dos números do vetor A):\n");
+    for ( i = 0; i < 5; i++) {
+        printf("%d ", B[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
